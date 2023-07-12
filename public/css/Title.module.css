@@ -1,0 +1,87 @@
+.Title {
+    position: fixed;
+
+    top: 50%;
+    right: 50%;
+    z-index: 5;
+
+    transform: translate(50%, -100%);
+
+    font-family: 'Bentham';
+    font-size: 10vw;
+
+    line-height: 8vw;
+
+    padding: 1vw 0;
+
+    border-top: 0.2vw solid #d8cfaf;
+    border-bottom: 0.2vw solid #d8cfaf;
+
+    color: #d8cfaf;
+
+    text-transform: uppercase;
+
+    animation: bounceScale 5s;
+
+    transition: 500ms;
+}
+
+@keyframes bounceScale {
+    0%, 85% {
+        transform: translate(50%, -100%) scale(0);
+    }
+
+    96% {
+        transform: translate(50%, -100%) scale(1.1);
+    }
+
+    98% {
+        transform: translate(50%, -100%) scale(0.9);
+    }
+    
+    100% {
+        transform: translate(50%, -100%) scale(1);
+    }
+}
+
+.Title span:last-child {
+    letter-spacing: 2.7vw;
+    margin-right: -2.7vw;
+
+}
+
+
+.Title.small {
+    position: fixed;
+
+    margin: 0;
+
+    top: 2rem;
+    right: 2rem;
+    z-index: 10;
+
+    transform-origin: top right;
+    transform: scale(0.2);
+    color: #1e1a1d;
+    border-color: #1e1a1d;
+}
+
+@media screen and (orientation: portrait) {
+    .Title {
+        font-size: 15vw;
+
+        line-height: 12vw;
+    
+        padding: 1.5vw 0;
+    
+        border-top: 0.3vw solid #d8cfaf;
+        border-bottom: 0.3vw solid #d8cfaf;
+    }
+
+    .Title span:last-child {
+        display: block;
+        letter-spacing: 4.05vw;
+        margin-right: -4.05vw;
+    
+    }
+}

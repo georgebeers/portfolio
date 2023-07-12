@@ -1,0 +1,211 @@
+.Projects {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: #984447;
+    color: #d8cfaf;
+
+    font-family: 'Audrey';
+
+    transition: 500ms;   
+}
+
+.BackUp {
+    margin: 2rem auto 0;
+
+    text-align: center;
+    text-decoration: none;
+
+    transition: 200ms;
+
+    opacity: 0.8;
+    color: #d8cfaf;
+}
+
+.BackUp:hover {
+    opacity: 1;
+
+    transform-origin: top;
+    transform: scale(1.1);
+}
+
+.Projects:not(.inView) .BackUp {
+    transform: scaleX(0);
+}
+
+.Arrow {
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+
+    border-top: 0.1rem solid #d8cfaf;
+    border-right: 0.1rem solid #d8cfaf;
+
+    transform: rotate(-45deg);
+
+    transition: 300ms;
+}
+
+.BackUp:hover .Arrow {
+    transform: rotate(315deg);
+}
+
+.Split {
+    display: flex;
+    flex-grow: 1;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.Copyright {
+    margin-bottom: 2rem !important;
+    font-size: small;
+}
+
+.Showcase {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 40%;
+}
+
+.Showcase h1 {
+    margin-bottom: 2rem;
+    font-family: 'Bentham';
+}
+
+.Showcase .Sub {
+    margin-top: 2rem;
+
+    opacity: 0.6;
+}
+
+.Contact {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 40%;
+}
+
+.Contact h1 {
+    font-family: 'Bentham';
+}
+
+.Email {
+    color: #d8cfaf;
+    opacity: 0.8;
+
+    font-family: 'Bentham';
+    font-size: large;
+    text-decoration: none;
+    line-height: 2rem;
+
+    background-image: linear-gradient(#d8cfaf, #d8cfaf);
+    background-size: 0% 0.05rem;
+    background-position-y: 100%;
+    background-position-x: 50%;
+    background-repeat: no-repeat;
+
+    transition: 100ms;
+}
+
+.Email:hover {
+    background-size: 100% 0.05rem;
+}
+
+.Socials {
+    position: absolute;
+    display: flex;
+
+    gap: 1rem;
+
+    bottom: 2rem;
+    right: 2rem;
+
+    text-align: center;
+}
+
+.Socials a img {
+    display: inline;
+
+    width: 2rem;
+    height: 2rem;
+
+    opacity: 0.6;
+
+    transition: 100ms;
+}
+
+.Socials a img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+@media only screen and (orientation: portrait) {
+    .Projects {
+        height: max-content;
+        text-align: center;
+    }
+
+    .Split {
+        flex-direction: column;
+        flex-grow: 0;
+
+        gap: 4rem;
+    }
+
+    .Showcase .Sub {
+        display: none;
+    }
+
+    .Contact {
+        width: 60vw;
+        margin-bottom: 2rem;
+    }
+
+    .Socials {
+        position: relative;
+        
+        margin-top: 2rem;
+
+        right: 0;
+    }
+}
+
+@media screen and (orientation: portrait) and (max-device-height: 800px) {
+    .Split {
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 65em) {
+    .Projects {
+        height: fit-content;
+        justify-content: space-between;
+        text-align: center;
+
+        width: 100%;
+    }
+
+    .Split {
+        flex-direction: column;
+    }
+
+    .Contact {
+        margin-bottom: 2rem;
+    }
+}

@@ -1,0 +1,98 @@
+.Landing {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+
+    justify-content: bottom;
+    align-items: bottom;
+
+    background-size: 200% 100%;
+    background-image: linear-gradient(to right, #d8cfaf 50%, #32533d 50%);
+
+    animation: slideColor 5s forwards;
+}
+
+@keyframes slideColor {
+    0%, 85% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+.Slider {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    font-family: 'Bentham';
+    font-size: larger;
+    font-weight: bold;
+    font-style: italic;
+    
+    animation: slideOut 5s forwards;
+}
+
+
+@keyframes slideOut {
+    0%, 85% {
+        left: 50%;
+    }
+
+    100% {
+        left: -50%;
+    }
+}
+
+.SeeMore {
+    margin-bottom: 15dvh;
+
+    font-family: 'Audrey';
+
+    opacity: 0.8;
+    color: #d8cfaf;
+    text-decoration: none;
+
+    text-align: center;
+
+    transition: 200ms;
+
+    animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+    0%, 95% { opacity: 0; }
+
+    100% { opacity: 0.8; }
+}
+
+.SeeMore:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.Arrow {
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+
+    border-top: 0.1rem solid #d8cfaf;
+    border-right: 0.1rem solid #d8cfaf;
+
+    transform: rotate(135deg);
+
+    transition: 300ms;
+}
+
+.SeeMore:hover .Arrow {
+    transform: rotate(495deg);
+}
+
+.Landing:not(.inView) .SeeMore {
+    transform: scaleX(0);
+}

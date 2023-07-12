@@ -1,0 +1,100 @@
+.Card {
+    padding: 2rem;
+
+    width: min-content;
+
+    background-color: #d8cfaf;
+    color: #1e1a1d;
+
+    border: 1px solid #837c63;
+    border-radius: 0.5rem;
+
+    box-shadow: 0.5vh 1vh 2vh rgba(1, 1, 1, 0.1);
+
+    transition: 200ms;
+}
+
+
+.Card a {
+    display: block;
+    position: relative;
+
+    width: max-content;
+    height: max-content;
+}
+
+.Card a img {
+    height: 20vh;
+    border: 1px solid #1e1a1d;
+
+    transition: 100ms;
+}
+
+.Card a:hover img {
+    filter: brightness(0.3);
+}
+
+.Card a span {
+    display: block;
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    color: white;
+
+    opacity: 0;
+
+    transition: 100ms;
+}
+
+.Card a:hover span {
+    opacity: 0.8;
+}
+
+.Card h2 {
+    width: fit-content;
+
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+
+    padding-top: 0.1rem;
+
+    font-family: 'Bentham';
+    font-size: large;
+    font-weight: bold;
+
+    border-top: 1px solid #1e1a1d;
+    border-bottom: 1px solid #1e1a1d;
+
+}
+
+.Card h2 span {
+    opacity: 0.5;
+}
+
+.Card p {
+    margin-top: 1rem;
+}
+
+.Card p span {
+    display: block;
+    opacity: 0.7;
+    text-align: center;
+}
+
+@media (pointer: fine) {   
+    .Card:hover {
+        transform: scale(1.05) rotate(-1deg);
+        box-shadow: 1vh 2vh 2vh rgba(1, 1, 1, 0.1);
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .Card a img {
+        width: 60vw;
+        height: auto;
+    }
+}

@@ -1,0 +1,12 @@
+.Section {
+    position: relative;
+
+    width: 100%;
+    height: 100dvh;
+
+    scroll-snap-align: start;
+}
+
+.Section p {
+    margin: 0;
+}

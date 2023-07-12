@@ -1,0 +1,176 @@
+.About {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: #d8cfaf;
+    color: #1e1a1d;
+
+    font-family: 'Audrey';
+
+    transition: 500ms;
+}
+
+.Nav {
+    margin: 2rem auto 0;
+
+    text-align: center;
+    text-decoration: none;
+
+    transition: 200ms;
+
+    opacity: 0.8;
+    color: #1e1a1d;
+}
+
+.Nav:hover {
+    opacity: 1;
+
+    transform-origin: top;
+    transform: scale(1.1);
+}
+
+.About:not(.inView) .Nav {
+    transform: scaleX(0);
+}
+
+.Arrow {
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+
+    border-top: 0.1rem solid #1e1a1d;
+    border-right: 0.1rem solid #1e1a1d;
+
+    transform: rotate(-45deg);
+
+    transition: 300ms;
+}
+
+.Nav:hover .Arrow {
+    transform: rotate(315deg);
+}
+
+.SeeMore {
+    margin: 0 auto 2rem;
+}
+
+.SeeMore .Arrow {
+    transform: rotate(135deg);
+}
+
+.SeeMore:hover .Arrow {
+    transform: rotate(495deg);
+}
+
+.Split {
+    display: flex;
+
+    flex-grow: 1;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.Bio {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 35vw;
+
+    margin-right: 5vw;
+
+    transition: 400ms;
+
+    font-size: medium;
+
+    opacity: 0;
+
+    transition: 200ms;
+}
+
+.About.inView .Bio {
+    opacity: 1;
+}
+
+
+.Polaroid {
+    position: relative;
+
+    object-fit: cover;
+
+    width: 40dvh;
+    height: 40dvh;
+
+    border: 2dvh solid #ebe9e6;
+    border-bottom-width: 10vh;
+
+    box-shadow: 0.5dvh 1dvh 2dvh rgba(1, 1, 1, 0.1);
+    filter: drop-shadow(0 0 1dvh black inset);
+
+    transform: rotate(5deg);
+
+    transition: 200ms;
+}
+
+@media only screen and (orientation: portrait) {
+    .About {
+        justify-content: space-between;
+    }
+    .Split {
+        flex-direction: column-reverse;
+        flex-grow: 0;
+
+        gap: 4rem;
+    }
+
+    .Bio {
+        margin: auto;
+
+        z-index: 2;
+
+        width: 70vw;
+        text-align: center;
+    }
+
+    .Polaroid {
+        width: 40vw;
+        height: 40vw;
+
+        border: 2vw solid #ebe9e6;
+        border-bottom-width: 10vw;
+
+        box-shadow: 0.5vw 1vw 2vw rgba(1, 1, 1, 0.1);
+        filter: drop-shadow(0 0 1vw black inset);
+    }
+}
+
+@media screen and (orientation: portrait) and (max-device-height: 700px) {
+    .Split {
+        gap: 2rem;
+    }
+
+    .Polaroid {
+        width: 35vw;
+        height: 35vw;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-width: 1100px) {
+    .Bio {
+        width: 50vw;
+    }
+
+    .Polaroid {
+        width: 35vh;
+        height: 35vh;
+    }
+}

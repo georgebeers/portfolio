@@ -1,0 +1,59 @@
+@font-face {
+    font-family: Audrey;
+    src: url("../fonts/Audrey-Normal.otf") format("opentype");
+
+    letter-spacing: 0rem !important;
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Audrey;
+    src: url("../fonts/Audrey-Medium.otf") format("opentype");
+
+    letter-spacing: 0rem !important;
+
+    font-weight: medium;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Audrey;
+    src: url("../fonts/Audrey-NormalOblique.otf") format("opentype");
+
+    letter-spacing: 0rem !important;
+
+    font-weight: normal;
+    font-style: oblique;
+}
+
+@font-face {
+    font-family: Audrey;
+    src: url("../fonts/Audrey-MediumOblique.otf") format("opentype");
+
+    letter-spacing: 0rem !important;
+
+    font-weight: medium;
+    font-style: oblique;
+}
+
+@font-face {
+    font-family: Audrey;
+    src: url("../fonts/Audrey-Bold.otf") format("opentype");
+
+    letter-spacing: 0rem !important;
+
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Audrey;
+    src: url("../fonts/Audrey-BoldOblique.otf") format("opentype");
+
+    letter-spacing: 0rem !important;
+
+    font-weight: bold;
+    font-style: oblique;
+}
